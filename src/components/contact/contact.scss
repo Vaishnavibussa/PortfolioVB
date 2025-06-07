@@ -1,0 +1,170 @@
+@import "../../app.scss";
+.contact{
+    height: 100%;
+    
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 13%;
+    gap: 50px;
+      align-items: flex-start;
+    
+
+    @include mobile{
+            width: 100%;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+    .textContainer{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        gap:40px;
+
+        @include mobile{
+            gap: 20px;
+            text-align: center;
+            line-height: 88px;
+            align-items: center;
+            margin-top: 70px;
+
+        }
+
+        h1{
+            color: orange;
+            font-size: 100px;
+            line-height: 88px;
+
+            @include mobile{
+                font-family: 36px;
+            }
+        }
+        span{
+            font-weight: 300;
+        }
+    }
+    .formContainer{
+        flex:1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        // background-color: rebeccapurple;
+
+        @include mobile{
+            padding: 50px;
+            width: 100%;
+        }
+
+        .phoneSvg{
+            stroke: orange;
+            // position: absolute;
+            margin: auto;
+            z-index: -1;
+        }
+
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+                form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 350px;
+            
+            
+            input, textarea{
+                padding: 20px;
+                background: transparent;
+                // width: 300px;
+                      width: 100%;
+      max-width: 300px;
+                font-size: medium;
+                border: 1px solid white;
+                color: white;
+                border-radius: 5px;
+
+                @include mobile{
+                    padding: 10px;
+                }
+            }
+            
+            button{
+                padding: 20px;
+                border: none;
+                align-items: center;
+                border-radius: 5px;
+                background-color: orange;
+                cursor: pointer;
+                // : 30px;
+                font-weight: 500; 
+                margin: 2px auto;
+                font-size: medium;
+                @include mobile{
+                    padding: 10px;
+                }
+            }
+            }
+         img {
+  transform: rotate(100deg);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+
+        }
+
+        
+
+// .errorMsg {
+//   color: #ff4d4d;
+//   margin-top: 10px;
+// }
+
+// .successMsg {
+//   color: #4caf50;
+//   margin-top: 10px;
+// }
+
+    
+
+}
+
+
+.scrollToTop {
+//   position: fixed;
+//   bottom: 0px;
+//   right: 30px;
+//   background: #fca311;
+//   border-radius: 50%;
+//   padding: 12px;
+//   z-index: 100;
+  cursor: pointer;
+//   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+
+
+//   &:hover {
+//     background: #ffba08;
+//   }
+
+  .arrowIcon {
+    color: white;
+    font-size: 44px;
+    margin-left: 290px;
+    width: 30px;
+  }
+   h6 {
+    margin: 4px 0 0;
+    color: #eeeeee;
+    margin-left: 250px;
+    font-size: 12px;
+  }
+    &:hover .arrowIcon {
+    color: white;
+  }
+}

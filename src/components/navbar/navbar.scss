@@ -1,0 +1,60 @@
+@import "../../app.scss";
+
+.navbar{
+    height: 70px;
+
+    .wrapper{
+        max-width: 1366px;
+        margin:auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // background-color: rebeccapurple;
+        height: 100%;
+
+        @include mobile{
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        span{
+            font-weight: bolder;
+            font-size: larger;
+            
+        }
+        .social{
+            display: flex;
+            gap: 20px;
+            
+            
+            img{
+                width: 25px;
+                height: 25x;
+            }
+
+        }
+    }
+    #resume {
+  color: rgb(255, 166, 0);
+  background-color: transparent;
+  border: 2px solid rgb(255, 166, 0);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#resume:hover {
+  background-color: rgb(255, 166, 0);
+  color: black;
+}
+
+#resume a {
+  text-decoration: none;
+  color: inherit;
+}
+
+}
