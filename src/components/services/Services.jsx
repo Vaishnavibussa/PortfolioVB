@@ -170,7 +170,7 @@ const Services = () => {
       </motion.div>
 
       {/* 🔶 Skills */}
-      <motion.div className="infoSection skills" variants={variants}>
+      {/* <motion.div className="infoSection skills" variants={variants}>
         <h2>Skills</h2>
         <ul className="skillsList">
           <li>React.js</li>
@@ -185,7 +185,7 @@ const Services = () => {
           <li>CNN</li>
          
         </ul>
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 };
