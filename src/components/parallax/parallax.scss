@@ -1,69 +1,84 @@
 // @import "../../app.scss";
 
-// .parallax{
-//     width: 100%;
-//     height: 100%;
-//     position: relative;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     overflow: hidden;
-//       background-size: cover;
+// .parallax {
+//   width: 100%;
+//   height: 100vh;
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   overflow: hidden;
+//   background-size: cover;
 //   background-repeat: no-repeat;
-//   background-attachment: fixed; // gives the parallax feel
-//   z-index: -1;
+//   background-attachment: fixed;
+//   padding: 80px 20px;
 
-//     h1{
-//         font: 100px;
-//             color: white;
+//   .aboutMeContainer {
+//     max-width: 940px;
+//     padding: 40px;
+//     background: rgba(255, 255, 255, 0.05);
+//     border-radius: 20px;
+//     box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+//     // backdrop-filter: blur(14px);
+//     text-align: left;
+//     background: rgba(255, 255, 255, 0.09); // or any color with alpha < 1
 //     z-index: 2;
-//         @include mobile{
-//             font-size: 76px;
-//             text-align: center;
+    
+//       position: relative;  // needed for positioning the image inside
 
-//         }    
-//     }
-//     .mountains{
-//         background-image: url("/mountains.png");
-//         background-size: cover;
-//         background-position: bottom;
-//         width: 100%;
-//         height: 100%;
-//         position: absolute;
-//         z-index: 3;
+//   .profilePic {
+//     position: absolute;
+//     top: 20px;      // distance from top of the container
+//     right: 20px;    // distance from right side of container
+//     width: 115px;   // size of the image, adjust as needed
+//     height: 115px;
+//     object-position: 10% 17%;
+//     border-radius: 50%;  // makes it round
+//     object-fit: cover;
+//     border: 3px solid white; // optional: white border for contrast
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+//     z-index: 10;
+//   }
 
-//         @include mobile{
-//             background-repeat: no-repeat;
-//             background-size: contain;
-//         }
-//     }
-//     .planets{
-//         background-image: url("/planets.png");
-//         background-size: cover;
-//         background-position: bottom;
-//         width: 100%;
-//         height: 100%;
-//         position: absolute;
-//         z-index: 2;
-//         @include mobile{
-//             background-repeat: no-repeat;
-//             background-size: contain;
-//         }
-//     }
-//     .stars{
-//         background-image: url("/stars.png");
-//         background-size: cover;
-//         background-position: bottom;
-//         width: 100%;
-//         height: 100%;
-//         position: absolute;
-//         z-index: 1;
-//         @include mobile{
-//             background-repeat: no-repeat;
-//             background-size: contain;
-//         }
+//     h1 {
+//       font-size: 2.875rem;
+//       margin-bottom: 24px;
+//       color: #fca311;
+//       font-weight: 800;
+//       text-shadow: 2px 2px #000;
+
+//       @include mobile {
+//         font-size: 2.1rem;
+//         text-align: center;
+//       }
 //     }
 
+//     p {
+//       font-size: 1.125rem;
+//       line-height: 1.8;
+//       color: #eeeeee;
+
+//       .highlight {
+//         color: #ffd700;
+//         font-weight: bold;
+//       }
+
+//       strong {
+//         color: #a0e7e5;
+//         font-weight: bold;
+//       }
+
+//       em {
+//         color: #e0aaff;
+//         font-style: italic;
+//       }
+
+//       @include mobile {
+//         font-size: 1rem;
+//         text-align: justify;
+//       }
+//     }
+//   }
 // }
 
 @import "../../app.scss";
@@ -81,43 +96,72 @@
   background-attachment: fixed;
   padding: 80px 20px;
 
+  @include mobile {
+    flex-direction: column;
+    padding: 60px 15px;
+    height: auto; // allow content to define height
+    background-attachment: scroll; // fallback on mobile
+  }
+
   .aboutMeContainer {
     max-width: 940px;
+    width: 100%;
     padding: 40px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.09);
     border-radius: 20px;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
-    // backdrop-filter: blur(14px);
     text-align: left;
-    background: rgba(255, 255, 255, 0.09); // or any color with alpha < 1
+    position: relative;
     z-index: 2;
-    
-      position: relative;  // needed for positioning the image inside
 
-  .profilePic {
-    position: absolute;
-    top: 20px;      // distance from top of the container
-    right: 20px;    // distance from right side of container
-    width: 115px;   // size of the image, adjust as needed
-    height: 115px;
-    object-position: 10% 17%;
-    border-radius: 50%;  // makes it round
-    object-fit: cover;
-    border: 3px solid white; // optional: white border for contrast
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 10;
+    @include mobile {
+      padding: 20px 15px;
+      text-align: center;
+    }
+
+.profilePic {
+  position: absolute;
+  // bottom: 10px;
+  left: 2px;
+  top: -36px;
+
+  width: 220px;     // ⬅️ Increased from 115px
+  height: 220px;    // ⬅️ Increased from 115px
+
+  border-radius: 50%;
+  border: none;
+  object-fit: cover;
+  // border: 3px solid white;
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  @include mobile {
+    width: 170px;   // ⬅️ Increased from 80px
+    height: 100px;
+    top: -40px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
   }
+}
+
+    img{
+      height: 90px;
+      
+    }
 
     h1 {
       font-size: 2.875rem;
       margin-bottom: 24px;
+      margin-left: 190px;
       color: #fca311;
       font-weight: 800;
       text-shadow: 2px 2px #000;
 
       @include mobile {
-        font-size: 2.1rem;
-        text-align: center;
+        margin-left: 0;
+        font-size: 1.4rem;
+        margin-top: 60px;
       }
     }
 
@@ -125,6 +169,7 @@
       font-size: 1.125rem;
       line-height: 1.8;
       color: #eeeeee;
+      margin-top: 20px;
 
       .highlight {
         color: #ffd700;
@@ -142,7 +187,7 @@
       }
 
       @include mobile {
-        font-size: 1rem;
+        font-size: 0.8rem;
         text-align: justify;
       }
     }

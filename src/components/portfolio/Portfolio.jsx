@@ -117,10 +117,19 @@ const Portfolio = () => {
             <motion.div style={{scaleX}} className="progressBar"></motion.div>
             <p>Dive into my portfolio, where tech stacks meet real-world impact!</p>
         </div>
-        {items.map((item)=>(
+        <br /><br />
+
+        {/* {items.map((item)=>(
             <Single item={item} key={item.id} />
+            
         )
-        )}
+        
+        )} */}
+        {items.map((item) => (
+  <div className="single-item" key={item.id}>
+    <Single item={item} />
+  </div>
+))}
     </div>
   )
 }

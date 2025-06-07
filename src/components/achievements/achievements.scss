@@ -87,6 +87,117 @@
 // }
 
 
+// .achievements-section {
+//   max-width: 1100px;
+//   margin: 60px auto;
+//   padding: 20px;
+//   color: #f0f0f0;
+//   background: #17172c;
+//   border-radius: 12px;
+
+//   .title {
+//     font-size: 3rem;
+//     font-weight: bolder;
+//     color: orange;
+//     text-align: center;
+//     margin-bottom: 50px;
+//   }
+
+//   .cards-container {
+//     display: grid;
+//     gap: 30px;
+//     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//   }
+
+//   .card {
+//     background: #181828;
+//     border: 1px solid #ffa50044;
+//     // width: 400px;
+//     border-radius: 15px;
+//     padding: 25px;
+//     position: relative;
+//     transition: 0.3s ease-in-out;
+//     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+//     &:hover {
+//       transform: translateY(-5px);
+//       box-shadow: 0 8px 18px rgba(255, 165, 0, 0.15);
+//     }
+
+//     .card-header {
+//       display: flex;
+//       // flex-direction: column;
+//       align-items: center;
+//       gap: 15px;
+//       margin-bottom: 15px;
+
+//       h2 {
+//         font-size: 1.5rem;
+//         color: #ffa500;
+//       }
+
+//       .icon {
+//         width: 120px;
+//         height: 120px;
+//         border-radius: 50%;
+//         transform: scale(1.1);
+//         // filter: brightness(0) invert(1);
+//       }
+//     }
+
+//     .short-desc {
+//       font-size: 1rem;
+//       color: #ccc;
+//     }
+
+//     .full-desc {
+//       margin-top: 15px;
+//       font-size: 1rem;
+//       line-height: 1.6;
+//       color: #eee;
+
+//       ul {
+//         padding-left: 20px;
+//         list-style-type: disc;
+//         li {
+//           margin-bottom: 6px;
+//         }
+//       }
+
+//       em {
+//         color: #ffa500cc;
+//       }
+//     }
+
+//     .toggle-btn {
+//       margin-top: 15px;
+//       background: none;
+//       border: none;
+//       color: #ffa500;
+//       font-weight: bold;
+//       cursor: pointer;
+//       font-size: 14px;
+//       transition: 0.2s ease;
+
+//       &:hover {
+//         text-decoration: underline;
+//       }
+//     }
+//   }
+// }
+
+// // Responsive
+// @media (max-width: 768px) {
+//   .achievements-section {
+//     padding: 10px;
+//   }
+
+//   .card {
+//     padding: 20px;
+//   }
+// }
+
+@import "../../app.scss";
 .achievements-section {
   max-width: 1100px;
   margin: 60px auto;
@@ -94,6 +205,11 @@
   color: #f0f0f0;
   background: #17172c;
   border-radius: 12px;
+  height: auto; // Allow content to grow naturally
+
+  @include mobile {
+    height: auto; // Ensure this overrides any vh on mobile
+  }
 
   .title {
     font-size: 3rem;
@@ -101,6 +217,11 @@
     color: orange;
     text-align: center;
     margin-bottom: 50px;
+
+    @include mobile {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
   }
 
   .cards-container {
@@ -112,7 +233,6 @@
   .card {
     background: #181828;
     border: 1px solid #ffa50044;
-    // width: 400px;
     border-radius: 15px;
     padding: 25px;
     position: relative;
@@ -126,7 +246,6 @@
 
     .card-header {
       display: flex;
-      // flex-direction: column;
       align-items: center;
       gap: 15px;
       margin-bottom: 15px;
@@ -141,7 +260,16 @@
         height: 120px;
         border-radius: 50%;
         transform: scale(1.1);
-        // filter: brightness(0) invert(1);
+
+        @include mobile {
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
       }
     }
 
@@ -155,10 +283,21 @@
       font-size: 1rem;
       line-height: 1.6;
       color: #eee;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+
+      &.hidden {
+        max-height: 0;
+      }
+
+      &.visible {
+        max-height: 1000px;
+      }
 
       ul {
         padding-left: 20px;
         list-style-type: disc;
+
         li {
           margin-bottom: 6px;
         }
@@ -166,6 +305,19 @@
 
       em {
         color: #ffa500cc;
+      }
+
+      @include mobile {
+        font-size: 0.95rem;
+      }
+    }
+
+    p {
+      @include mobile {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
       }
     }
 
@@ -182,17 +334,50 @@
       &:hover {
         text-decoration: underline;
       }
+
+      @include mobile {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
     }
   }
 }
 
-// Responsive
-@media (max-width: 768px) {
-  .achievements-section {
-    padding: 10px;
+// Responsive overrides (if you’re not using @include mobile)
+@media (max-width: 1024px) {
+  .card .card-header .icon {
+    width: 100px;
+    // height: 100px;
   }
+  .card .card-header h2 {
+    font-size: 1.3rem;
+  }
+}
 
+@media (max-width: 768px) {
   .card {
     padding: 20px;
+  }
+  .card .card-header h2 {
+    font-size: 1.2rem;
+  }
+  .card .short-desc,
+  .card .full-desc {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card .card-header h2 {
+    font-size: 1.1rem;
+  }
+  .card .short-desc,
+  .card .full-desc {
+    font-size: 0.9rem;
+  }
+  .card .toggle-btn {
+    font-size: 12px;
   }
 }

@@ -89,7 +89,7 @@ const Parallax = ({ type }) => {
     >
  <motion.div className="aboutMeContainer" style={{ y: yContent }}>
    <img
-    src="/pic4.png" // Replace with your actual image path or URL
+    src="/normalpic.jpg" // Replace with your actual image path or URL
     alt="Vaishnavi Bussa"
     className="profilePic"
   />

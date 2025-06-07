@@ -21,7 +21,7 @@ a {
 }
 
 section{
-    height: 100vh;
+    // height: 100vh;
     scroll-snap-align: center;
 }
 
@@ -31,24 +31,26 @@ section{
 }
 
 
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
 
-@mixin mobile{
-    @media (max-width:738px) {
-        @content;
-    }
+@mixin tablet {
+  @media (min-width: 739px) and (max-width: 1024px) {
+    @content;
+  }
 }
-@mixin tablet{
-    @media (max-width:738px) {
-        @content;
-    }
+
+@mixin laptop {
+  @media (min-width: 1025px) and (max-width: 1366px) {
+    @content;
+  }
 }
-@mixin mobile{
-    @media (max-width:1024px) {
-        @content;
-    }
-}
-@mixin desktop{
-    @media (max-width:1366px) {
-        @content;
-    }
+
+@mixin desktop {
+  @media (min-width: 1367px) {
+    @content;
+  }
 }

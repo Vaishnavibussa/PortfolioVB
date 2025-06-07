@@ -46,12 +46,26 @@ const Myself = () => {
       <div className="wrapper">
       <motion.div className="textContainer" variants={textVariants}
       initial="initial" animate="animate">
-        <motion.h2  variants={textVariants} >VAISHNAVI BUSSA</motion.h2>
+        <motion.h2  className="vaish" variants={textVariants} >VAISHNAVI BUSSA</motion.h2>
         <motion.h1  variants={textVariants} >Full stack & AI-ML developer</motion.h1>
         <motion.div  variants={textVariants}  className="buttons">
           <motion.button className="latestworks" variants={textVariants}> See My Works..</motion.button>
           <motion.button className="ctcme"  variants={textVariants} >Contact Me</motion.button>
         </motion.div>
+        <motion.button
+  id="resume"
+  animate={{
+    scale: [1, 1.1, 1],
+  }}
+  transition={{
+    duration: 1.5,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+>
+  <a href="" target="_blank" rel="noopener noreferrer">RESUME</a>
+</motion.button>
+
         <motion.img  variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
       </motion.div>
 
@@ -61,9 +75,9 @@ const Myself = () => {
 
       </div>
         <div className="imageContainer">
-            <img src="/normalpic.jpg" height="90px"  alt="" />
+            {/* <img src="/normalpic4.jpg" height="90px"  alt="" /> */}
             {/* <img src="/pic4.png"  alt="" /> */}
-            {/* <img src="/imgtalk2.JPG"  alt="" /> */}
+            <img src="/imgtalk2.JPG"  alt="" />
         </div>
       
     </div>

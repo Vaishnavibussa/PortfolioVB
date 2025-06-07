@@ -1,118 +1,272 @@
+// @import "../../app.scss";
+
+// .portfolio{
+//     // height: 100vh;
+//     position: relative;
+//     p{
+//         color: rgb(190, 182, 182);
+//         font-style: italic;
+//         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+//     }
+
+//     .progress{
+//         position: sticky;
+//         top:0;
+//         left: 0;
+//         padding-top: 50px;
+//         text-align: center;
+//         color: orange;
+//         font-size: 1.3rem;
+
+        
+//         @include mobile{
+//             padding-top: calc(100vh - 100px);
+//             font-size: 1.5rem;
+//             // bottom: 0;
+//         }
+
+//         .progressBar{
+//             height: 10px;
+//             background: white;
+//         }
+
+//     }
+
+//     .container{
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         width: 100%;
+//         height: 100%;
+//         overflow: hidden;
+
+//         .wrapper{
+//             max-width: 1366px;
+//             height: 100%;
+//             margin: auto;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             gap: 50px;
+
+//             @include mobile{
+//             flex-direction: column;
+        
+//             }
+
+//             .imageContainer{
+//                 flex:1;
+//                 height: 50%;
+
+//                 @include mobile{
+//            width: 100%;
+//            max-height: 300px;
+        
+//             }
+//                 img{
+//                     width: 100%;
+//                     height: 100%; 
+//                     object-fit: cover;
+//                     @include mobile{
+//             flex-direction: contain;
+        
+//             }
+//                 }
+
+
+//         }
+//         .textContainer{
+//             flex:1;
+//             display: flex;
+//             flex-direction: column;
+//             gap: 30px;
+
+//             @include mobile{
+//             transform: none !important;
+//             padding: 10px;
+//             align-items: center;
+        
+//             }
+
+//             h2{
+//                 font-size: 2.7rem;
+//             }
+//             h6{
+//                 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+//                 font-size: 1.1rem;
+//                 color: rgb(194, 137, 62);
+//             }
+//             p{
+//                 color: gray;
+//                 font-size: 1.25rem;
+
+//                 @include mobile{
+//                   font-size: 1rem;
+//             }
+//             }
+//             button{
+//                 background: orange;
+//                 border: none;
+//                 border-radius: 10px;
+//                 width:150px ;
+//                 cursor: pointer;
+//             }
+//         }
+//     }
+
+//     }
+// }
+
 @import "../../app.scss";
+.portfolio {
+  position: relative;
+  height: auto; // Allow content to define height
 
-.portfolio{
-    // height: 100vh;
-    position: relative;
-    p{
-        color: rgb(190, 182, 182);
-        font-style: italic;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  @include mobile {
+    height: auto;
+  }
+
+  .single-item {
+    margin-bottom: 100px; // Give ample space between projects
+    @include mobile {
+      margin-bottom: 60px;
+    }
+  }
+
+  p {
+    color: rgb(190, 182, 182);
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+ .progress {
+//   position: sticky;
+  text-align: center;
+  color: orange;
+  font-size: 1.5rem;
+  padding-top: 60px;
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+
+    @include mobile {
+      font-size: 2rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      text-align: center; // ✅ Ensures centering
+    }
+  }
+
+  @include mobile {
+    position: relative; // ✅ Overrides sticky for mobile
+    padding-top: 20px;  // ✅ More vertical space
+    font-size: 1.4rem;
+  }
+
+  .progressBar {
+    height: 10px;
+    background: white;
+    margin: 10px auto 20px auto;
+    width: 80%;
+  }
+}
+
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    @include mobile{
+        height: auto;
     }
 
-    .progress{
-        position: sticky;
-        top:0;
-        left: 0;
-        padding-top: 50px;
-        text-align: center;
-        color: orange;
-        font-size: 1.3rem;
+    .wrapper {
+      max-width: 1366px;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
 
-        
-        @include mobile{
-            padding-top: calc(100vh - 100px);
-            font-size: 1.5rem;
-            // bottom: 0;
+      @include mobile {
+        flex-direction: column;
+        height: auto;
+        padding: 0 20px;
+      }
+
+      .imageContainer {
+        flex: 1;
+        height: 50%;
+
+        @include mobile {
+          width: 100%;
+          max-height: 300px;
         }
 
-        .progressBar{
-            height: 10px;
-            background: white;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          @include mobile {
+            object-fit: contain;
+          }
         }
+      }
 
-    }
-
-    .container{
+      .textContainer {
+        flex: 1;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
+        flex-direction: column;
+        gap: 30px;
 
-        .wrapper{
-            max-width: 1366px;
-            height: 100%;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-
-            @include mobile{
-            flex-direction: column;
-        
-            }
-
-            .imageContainer{
-                flex:1;
-                height: 50%;
-
-                @include mobile{
-           width: 100%;
-           max-height: 300px;
-        
-            }
-                img{
-                    width: 100%;
-                    height: 100%; 
-                    object-fit: cover;
-                    @include mobile{
-            flex-direction: contain;
-        
-            }
-                }
-
-
+        @include mobile {
+            position: relative;
+          transform: none !important;
+          padding: 10px;
+          align-items: center;
         }
-        .textContainer{
-            flex:1;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
 
-            @include mobile{
-            transform: none !important;
-            padding: 10px;
-            align-items: center;
-        
-            }
-
-            h2{
-                font-size: 2.7rem;
-            }
-            h6{
-                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                font-size: 1.1rem;
-                color: rgb(194, 137, 62);
-            }
-            p{
-                color: gray;
-                font-size: 1.25rem;
-
-                @include mobile{
-                  font-size: 1rem;
-            }
-            }
-            button{
-                background: orange;
-                border: none;
-                border-radius: 10px;
-                width:150px ;
-                cursor: pointer;
-            }
+        h2 {
+          font-size: 2.5rem;
+          text-align: center;
         }
-    }
 
+        h6 {
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-size: 1.1rem;
+          color: rgb(194, 137, 62);
+          text-align: center;
+        }
+
+        p {
+          color: gray;
+          font-size: 1.2rem;
+          line-height: 1.6;
+
+          @include mobile {
+            font-size: 1rem;
+            text-align: center;
+          }
+        }
+
+        button {
+          background: orange;
+          border: none;
+          border-radius: 10px;
+          width: 150px;
+          cursor: pointer;
+          padding: 10px;
+          margin: 5px;
+        }
+      }
     }
+  }
 }

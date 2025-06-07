@@ -100,7 +100,6 @@
 
 // export default Contact
 
-
 import { motion } from "framer-motion";
 import "./contact.scss";
 import { useRef, useState } from "react";
@@ -185,30 +184,29 @@ const Contact = () => {
             {success && <p style={{ color: "lightgreen" }}>Your message has been sent!</p>}
           </div>
         </motion.form>
+
         {/* ⬆️ Scroll to Top Button */}
-     <motion.div
-  className="scrollToTop"
-  initial={{ y: 100, opacity: 0 }}
-  whileInView={{ y: 0, opacity: 1 }}
-  animate={{
-    scale: [1, 1.1, 1],
-  }}
-  transition={{
-    duration: 1.5,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
-  whileHover={{ scale: 1.2 }}
-  whileTap={{ scale: 0.9 }}
-  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
->
-  <FaArrowUp className="arrowIcon" />
-  <h6>(back to homepage)</h6>
-</motion.div>
-
+        <motion.div
+          className="scrollToTop"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+          // transition={{
+          //   duration: 0.4,
+          //   repeat: 2,
+          //   ease: "easeInOut",
+          // }}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <FaArrowUp className="arrowIcon" />
+          <h6>(back to homepage)</h6>
+           <br />
+        </motion.div>
       </div>
-
-      
     </motion.div>
   );
 };
