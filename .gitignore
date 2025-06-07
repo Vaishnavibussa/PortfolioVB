@@ -23,5 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 .qodo
-public
-src\components\contact
+/public/
+src/components/contact/Contact.jsx
+
