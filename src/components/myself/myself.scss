@@ -91,9 +91,23 @@
           }
         }
 
-        .ctcme,
-        .latestworks {
+        .ctcme {
           height: 30px;
+          // width: 30px;
+          border-radius: 10px;
+          font-size: 1rem;
+          margin-top: 10px;
+          font-weight: bold;
+          background-color: #bfb8c7;
+          padding: 4px;
+
+          @include mobile {
+            width: 80%;
+          }
+        }
+        .latestworks {
+          height: 50px;
+          // width: 30px;
           border-radius: 10px;
           font-size: 1rem;
           font-weight: bold;
