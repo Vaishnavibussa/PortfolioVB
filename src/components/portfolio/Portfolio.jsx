@@ -22,8 +22,8 @@ const items=[
         img:"https://scholarlykitchen.sspnet.org/wp-content/uploads/2023/09/iStock-1479494606.jpg",
         tech:" Python, Firebase, Gemini API, NodeJS, React.js",
         desc:"Developed an AI-powered platform with features like chatbot support, journaling, community support and personalized Spotify recommendations. Utilized real-time data analytics for personalized insights and gamification elements to boost user engagement. Enabled direct communication with mental health professionals through the website for comprehensive support",
-        github: "https://github.com/",
-        live: "https://react-commer.vercel.app"
+        github: "https://github.com/Vaishnavibussa/Mind_Haven",
+        live: "https://youtu.be/gXlkTSWgE6Y?si=sX5QaDm0BY_wqd29"
     },
     {
         id:3,
@@ -32,7 +32,7 @@ const items=[
         tech:" PHP, Gemini, Flask, Python, sci-kit-learn, MySQL",
         desc:" Implemented direct-to-consumer channels, reducing product-to-market time by 40%. Empowered farmers by eliminating middlemen. Applied ML algorithms for crop yield prediction and used TensorFlow for real-time plant health detection, achieving a success rate 60%, improving sustainability and crop managemen",
         github: "https://github.com/Vaishnavibussa/CropCartel",
-        live: "https://react-commer.vercel.app"
+        live: "https://www.youtube.com/watch?v=PTUJ1ahr2yM"
     },
     {
         id:4,
@@ -41,7 +41,7 @@ const items=[
         tech:"Python, TensorFlow, Keras, numpy, pandas, OpenCV, Convolutional Neural Networks",
         desc:"Developed a real-time system to detect driver fatigue using facial landmark tracking and eye aspect ratio analysis. Triggered audio-visual alerts upon detecting drowsiness, achieving 90%+ accuracy on webcam input.",
         github: "https://github.com/Vaishnavibussa/DriverDrowsinessDetection",
-        live: "https://react-commer.vercel.app"
+        live: "hhttps://driverdrowsinessdetection-nxg1.onrender.com/"
     },
     {
         id:5,
@@ -50,7 +50,7 @@ const items=[
         tech:"CNN,CV, Tensorflow, Keras, Python",
         desc:"Developed a real-time system to detect driver fatigue using facial landmark tracking and eye aspect ratio analysis. Triggered audio-visual alerts upon detecting drowsiness, achieving 90%+ accuracy on webcam input.",
         github: "https://github.com/Vaishnavibussa/LeafDiseasePrediction",
-        live: "https://react-commer.vercel.app"
+        live: "https://github.com/Vaishnavibussa/LeafDiseasePrediction"
     },
     {
         id:6,
@@ -59,7 +59,7 @@ const items=[
         tech:"React, Nodejs, MySQL, Express",
         desc:"Facilitated mentorship by creating classes and assigning tasks, leading to a 35% increase in collaborative learning in the Advanced Academic Center(AAC) community. Enhanced mentorship with a customized Learning Management System.",
         github: "https://github.com/Vaishnavibussa/AAC_LMS",
-        live: "https://react-commer.vercel.app"
+        live: "https://www.figma.com/design/f8TJUK8x7lXN4mHv2UK9qW/Mentee-Mentor-Interface?node-id=0-1&t=oSX3I1Xe0UJF9lzM-1"
     },
 ];
 
