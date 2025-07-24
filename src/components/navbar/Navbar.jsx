@@ -32,7 +32,7 @@ const Navbar = () => {
     ease: "easeInOut",
   }}
 >
-  <a href="" target="_blank" rel="noopener noreferrer">RESUME</a>
+  <a href="https://drive.google.com/file/d/1NiBhIR46s4tow8N_ixJnd1vhCikCDjgV/view?usp=sharing" target="_blank" rel="noopener noreferrer">RESUME</a>
 </motion.button>
 
             {/* <button id="resume"><a href="">RESUME</a></button> */}

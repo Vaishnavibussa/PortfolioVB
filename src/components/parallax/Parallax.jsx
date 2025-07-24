@@ -49,7 +49,7 @@ As the <strong>President of G-Jeevan Club</strong>, I’ve led impactful initiat
     
     <h1>Code, Cause & Curiosity ✨</h1>
 <p>
-  I’m <span className="highlight">Vaishnavi Bussa</span> — a purpose-driven <strong>Full-Stack Developer</strong>, <strong>AIML Innovator</strong>, and tech storyteller. As a B.Tech IT student at GRIET (<strong>CGPA: 9.32</strong>), I combine technical rigor with real-world impact, building scalable frontends, backends, and ML models that matter.
+  I’m <span className="highlight">Vaishnavi Bussa</span> - an aspiring Software Engineer, a purpose-driven <strong>Full-Stack Developer</strong>, <strong>AIML Innovator</strong>, and tech storyteller. As a B.Tech IT student at GRIET (<strong>CGPA: 9.32</strong>), I combine technical rigor with real-world impact, building scalable frontends, backends, and ML models that matter.
   <br /><br />
   I’ve interned at <strong>TradeCafe.io</strong>, creating real-time assistance platforms, and was part of the <strong>Summer of AI</strong> cohort at <strong>IIIT Hyderabad & Swecha</strong>, leading AI projects focused on Indic languages and scalable ML systems. As a <strong>GirlScript Summer of Code</strong> contributor, I collaborate on open-source ML and web solutions.
   <br /><br />
