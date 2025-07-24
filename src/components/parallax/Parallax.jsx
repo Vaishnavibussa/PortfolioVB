@@ -63,6 +63,7 @@ As the <strong>President of G-Jeevan Club</strong>, I’ve led impactful initiat
   </p>
 </motion.div>
 
+
     </motion.div>
   );
 };

@@ -109,8 +109,11 @@ const Portfolio = () => {
   })
 
   return (
+
+  
     
     <div className="portfolio" id="Portfolio" ref={ref}>
+      {/* <br /><br /><br /><br /><br /><br /><br /> */}
         <div className="progress">
             <h1>Portfolio</h1>
             
