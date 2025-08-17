@@ -9,11 +9,11 @@ const achievementsData = [
   icon: "./Hackwin.jpg",
   short: "Built Crop Cartel — a farm-to-fork platform using AI and blockchain.",
   full: (
-    <p>
-      Participated in several hackathons, including <strong>Crop Cartel</strong>, a digital platform
+    <ul>
+      <li>Participated in several hackathons, including <strong>Crop Cartel</strong>, a digital platform
       connecting farmers directly with consumers, leveraging <em>AI/ML</em> for crop predictions and
-      <em> blockchain</em> for secure transactions.
-    </p>
+      <em> blockchain</em> for secure transactions.</li>
+    </ul>
   ),
 },
   {
