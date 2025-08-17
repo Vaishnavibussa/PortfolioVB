@@ -47,7 +47,7 @@ const Myself = () => {
       <motion.div className="textContainer" variants={textVariants}
       initial="initial" animate="animate">
         <motion.h2  className="vaish" variants={textVariants} >VAISHNAVI BUSSA</motion.h2>
-        <motion.h1  variants={textVariants} >Full Stack | AI/ML | FinTech | Software </motion.h1>
+        <motion.h1  variants={textVariants} >Full Stack | AI/ML | <br /> FinTech | Software </motion.h1>
         <motion.div  variants={textVariants}  className="buttons">
           <motion.button className="latestworks" variants={textVariants}> See My Works..</motion.button>
           <motion.button className="ctcme"  variants={textVariants} >Contact Me</motion.button>
